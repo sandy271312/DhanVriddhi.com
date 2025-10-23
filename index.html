@@ -1,138 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avish Enterprises</title>
   <style>
+    /* ===== Global Styling ===== */
     body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f7fa;
-  color: #222;
-}
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e9eef5;
+      color: #222;
+      line-height: 1.6;
+    }
 
-header {
-  background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
-  color: white;
-  padding: 30px 0 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+    header {
+      background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
+      color: white;
+      padding: 40px 0 25px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-header h1 {
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-nav a {
-  background: linear-gradient(90deg, #003366 70%);
-  margin: 0 18px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-nav a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
+    nav {
+      margin-top: 15px;
+    }
 
-.container {
-  max-width: 900px;
-  margin: 30px auto;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  padding: 30px 24px 20px 24px;
-}
+    nav a {
+      margin: 0 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
 
-section {
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-}
+    nav a:hover {
+      color: #ffd700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
 
-h2 {
-  color: #003366;
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 1.7rem;
-}
+    /* ===== Container Styling ===== */
+    .container {
+      max-width: 950px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 40px 30px;
+      border: 1px solid #dce3eb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-ul {
-  padding-left: 24px;
-}
-ul li {
-  margin-bottom: 7px;
-  font-size: 1.06rem;
-}
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 40px;
-  padding: 18px;
-  background: #f0f4fa;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
+    section {
+      margin-bottom: 30px;
+    }
 
-input, textarea {
-  padding: 12px;
-  border: 1px solid #cfd8dc;
-  border-radius: 7px;
-  font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  outline: none;
-}
+    h2 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.9rem;
+      border-left: 5px solid #0055aa;
+      padding-left: 12px;
+    }
 
-input:focus, textarea:focus {
-  border-color: #0055aa;
-  box-shadow: 0 0 6px rgba(0,85,170,0.14);
-}
+    p {
+      font-size: 1.05rem;
+      color: #333;
+    }
 
-button {
-  background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
-  color: white;
-  padding: 12px 0;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
-  transition: background 0.2s, box-shadow 0.2s;
-}
+    ul {
+      padding-left: 25px;
+    }
 
-button:hover {
-  background: linear-gradient(90deg, #0055aa 70%, #003366 100%);
-  box-shadow: 0 4px 14px rgba(0,85,170,0.08);
-}
+    ul li {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
 
-footer {
-  background: #003366;
-  color: white;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 1.08rem;
-  margin-top: 50px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
-  letter-spacing: 0.5px;
-}
+    /* ===== Contact Form ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 25px;
+      padding: 22px;
+      background: #f6f9fd;
+      border-radius: 12px;
+      box-shadow: inset 0 0 10px rgba(0, 85, 170, 0.05);
+    }
 
-a, a:visited {
-  color: #0055aa;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-a:hover {
-  color: #003366;
-  text-decoration: underline;
-}
+    input,
+    textarea {
+      padding: 14px;
+      border: 1px solid #cfd8dc;
+      border-radius: 7px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #0055aa;
+      box-shadow: 0 0 6px rgba(0, 85, 170, 0.15);
+    }
+
+    button {
+      background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
+      color: white;
+      padding: 14px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0055aa 70%, #003366 100%);
+      box-shadow: 0 4px 14px rgba(0, 85, 170, 0.15);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.05rem;
+      margin-top: 60px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    a,
+    a:visited {
+      color: #0055aa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #003366;
+      text-decoration: underline;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        margin: 0 12px;
+        font-size: 1rem;
+      }
+
+      .container {
+        margin: 25px 12px;
+        padding: 28px 18px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -147,50 +194,58 @@ a:hover {
 
   <section id="about" class="container">
     <h2>About Us</h2>
-    <p><b>Avish Enterprises</b> is a trusted name in the realm of IT products, consultation, and data
-security solutions. Specializing in e-waste management, IT hardware distribution, and
-secure data handling, we are committed to helping businesses manage their
-technology needs responsibly and efficiently.<br>
-We cater primarily to <b> B2B and corporate clients,</b> offering tailored solutions that align
-with today’s evolving tech landscape. Our services not only focus on providing high-
-quality IT products but also emphasize <b>sustainability, compliance, and security—</b>
-ensuring that our clients stay ahead while remaining environmentally and digitally
-responsible.
+    <p>
+      <b>Avish Enterprises</b> is a trusted name in the realm of IT products, consultation, and data
+      security solutions. Specializing in e-waste management, IT hardware distribution, and
+      secure data handling, we are committed to helping businesses manage their
+      technology needs responsibly and efficiently.
+      <br /><br />
+      We cater primarily to <b>B2B and corporate clients</b>, offering tailored solutions that align
+      with today’s evolving tech landscape. Our services focus on delivering <b>high-quality IT
+      products</b> while emphasizing <b>sustainability, compliance, and data security</b> — ensuring
+      our clients remain environmentally and digitally responsible.
     </p>
   </section>
 
   <section id="services" class="container">
     <h2>Our Services</h2>
     <ul>
-      <li>IT Retails Services</li>
+      <li>IT Retail Services</li>
       <li>E-waste Management</li>
-      <li>IT Products</li>
-      <li>Data Security</li>
-      <li>Retail Brokerage</li>
+      <li>IT Products Distribution</li>
+      <li>Data Security Solutions</li>
+      <li>Retail Brokerage & Consultancy</li>
     </ul>
   </section>
 
   <section id="contact" class="container">
     <h2>Contact Us</h2>
-    <p>You can reach us by email, phone, or using the form below:</p>
-    <p>Email: <a href="mailto:info@avishentreprises.co.in">info@avishentreprises.co.in</a></p>
-    <p><b>Registered Name:</b> Avish Enterprises<br>
-       <b>Registered Address:</b> Room no: 26-4-4B, Azad Nagar, RC Marg, Chembur, Mumbai - 400074<br>
-       <b>GST Number:</b> 27BEPPC645Q1ZQ
+    <p>You can reach us by email, phone, or using the contact form below:</p>
+
+    <p><b>Email:</b> <a href="mailto:info@avishentreprises.co.in">info@avishentreprises.co.in</a></p>
+
+    <p>
+      <b>Registered Name:</b> Avish Enterprises<br />
+      <b>Registered Address:</b> Room No: 26-4-4B, Azad Nagar, RC Marg, Chembur, Mumbai – 400074<br />
+      <b>GST Number:</b> 27BEPPC645Q1ZQ
     </p>
-    <p><b>Contact Details:</b><br>
-       📞 9870456111<br>
-       📞 9324864813
+
+    <p>
+      <b>Contact Numbers:</b><br />
+      📞 <a href="tel:9870456111">9870456111</a><br />
+      📞 <a href="tel:9324864813">9324864813</a>
     </p>
-    
+
     <form action="https://formspree.io/f/xjkeqdyd" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+  </section>
+
   <footer>
-    <p>Avish Enterprises. All rights reserved.</p>
+    <p>© 2025 Avish Enterprises. All rights reserved.</p>
   </footer>
 </body>
 </html>
