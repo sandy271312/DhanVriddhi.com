@@ -5,184 +5,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avish Enterprises</title>
   <style>
-    /* ===== Global Styling ===== */
+    /* General Page Styles */
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: #e9eef5;
       color: #222;
-      line-height: 1.6;
     }
 
+    /* Header Styles */
     header {
-      background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
+      background: linear-gradient(90deg, #003f80 70%, #0060c0 100%);
       color: white;
-      padding: 40px 0 25px 0;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      padding: 40px 0 20px 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
-      font-weight: 600;
+      font-size: 2.4rem;
+      font-weight: 700;
       letter-spacing: 1px;
     }
 
+    /* Navigation Bar */
     nav {
       margin-top: 15px;
     }
 
     nav a {
       margin: 0 20px;
-      color: white;
+      color: #f8faff;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
       transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     nav a:hover {
-      color: #ffd700;
-      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+      color: #ffdc64;
+      text-shadow: 0 0 10px rgba(255, 220, 100, 0.8);
     }
 
-    /* ===== Container Styling ===== */
+    /* Section Containers */
     .container {
-      max-width: 950px;
-      margin: 50px auto;
+      max-width: 900px;
+      margin: 30px auto;
       background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      padding: 40px 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px 24px 20px 24px;
       border: 1px solid #dce3eb;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .container:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      color: #003366;
+    .container h2 {
+      color: #003f80;
       margin-top: 0;
-      margin-bottom: 16px;
-      font-size: 1.9rem;
-      border-left: 5px solid #0055aa;
-      padding-left: 12px;
+      font-size: 1.6rem;
+      border-bottom: 2px solid #003f80;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.05rem;
+    .container p, .container li {
+      font-size: 1rem;
+      line-height: 1.6;
       color: #333;
     }
 
     ul {
-      padding-left: 25px;
+      margin: 10px 0 0 20px;
     }
 
-    ul li {
-      margin-bottom: 8px;
-      font-size: 1.08rem;
+    /* Contact Section */
+    .contact-info p {
+      margin: 8px 0;
+      line-height: 1.7;
     }
 
-    /* ===== Contact Form ===== */
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form Styling */
     form {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: 25px;
-      padding: 22px;
-      background: #f6f9fd;
-      border-radius: 12px;
-      box-shadow: inset 0 0 10px rgba(0, 85, 170, 0.05);
+      gap: 15px;
+      margin-top: 20px;
+      background: #f5f8fc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
-    input,
-    textarea {
-      padding: 14px;
-      border: 1px solid #cfd8dc;
-      border-radius: 7px;
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccd5e0;
+      border-radius: 8px;
       font-size: 1rem;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
       outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus, textarea:focus {
       border-color: #0055aa;
-      box-shadow: 0 0 6px rgba(0, 85, 170, 0.15);
+      box-shadow: 0 0 6px rgba(0, 85, 170, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
     }
 
     button {
-      background: linear-gradient(90deg, #003366 70%, #0055aa 100%);
+      background: linear-gradient(90deg, #003f80 70%, #0060c0 100%);
       color: white;
-      padding: 14px 0;
+      padding: 12px 0;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       font-size: 1.1rem;
       font-weight: 600;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       transition: background 0.3s, box-shadow 0.3s;
     }
 
     button:hover {
-      background: linear-gradient(90deg, #0055aa 70%, #003366 100%);
-      box-shadow: 0 4px 14px rgba(0, 85, 170, 0.15);
+      background: linear-gradient(90deg, #0060c0 70%, #003f80 100%);
+      box-shadow: 0 4px 10px rgba(0, 85, 170, 0.2);
     }
 
-    /* ===== Footer ===== */
+    /* Footer */
     footer {
-      background: #003366;
-      color: white;
       text-align: center;
-      padding: 20px 0;
-      font-size: 1.05rem;
-      margin-top: 60px;
-      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.08);
+      padding: 15px 0;
+      background-color: #003f80;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      letter-spacing: 0.4px;
     }
 
-    a,
-    a:visited {
-      color: #0055aa;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: #003366;
-      text-decoration: underline;
-    }
-
-    /* ===== Responsive Design ===== */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
       }
-
       nav a {
-        margin: 0 12px;
-        font-size: 1rem;
+        display: inline-block;
+        margin: 5px 10px;
       }
-
       .container {
-        margin: 25px 12px;
-        padding: 28px 18px;
+        padding: 20px;
+        margin: 20px 10px;
       }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Avish Enterprises</h1>
     <nav>
@@ -195,15 +191,15 @@
   <section id="about" class="container">
     <h2>About Us</h2>
     <p>
-      <b>Avish Enterprises</b> is a trusted name in the realm of IT products, consultation, and data
-      security solutions. Specializing in e-waste management, IT hardware distribution, and
-      secure data handling, we are committed to helping businesses manage their
-      technology needs responsibly and efficiently.
-      <br /><br />
-      We cater primarily to <b>B2B and corporate clients</b>, offering tailored solutions that align
-      with today’s evolving tech landscape. Our services focus on delivering <b>high-quality IT
-      products</b> while emphasizing <b>sustainability, compliance, and data security</b> — ensuring
-      our clients remain environmentally and digitally responsible.
+      <strong>Avish Enterprises</strong> is a trusted name in the realm of IT products, consultation, and data security solutions.
+      Specializing in e-waste management, IT hardware distribution, and secure data handling, we are committed to helping businesses
+      manage their technology needs responsibly and efficiently.
+    </p>
+    <p>
+      We cater primarily to <strong>B2B and corporate clients</strong>, offering tailored solutions that align with today’s evolving tech landscape.
+      Our services not only focus on providing high-quality IT products but also emphasize
+      <strong>sustainability, compliance, and security</strong> — ensuring that our clients stay ahead while remaining
+      environmentally and digitally responsible.
     </p>
   </section>
 
@@ -212,41 +208,34 @@
     <ul>
       <li>IT Retail Services</li>
       <li>E-waste Management</li>
-      <li>IT Products Distribution</li>
-      <li>Data Security Solutions</li>
-      <li>Retail Brokerage & Consultancy</li>
+      <li>IT Products</li>
+      <li>Data Security</li>
+      <li>Retail Brokerage</li>
     </ul>
   </section>
 
   <section id="contact" class="container">
     <h2>Contact Us</h2>
-    <p>You can reach us by email, phone, or using the contact form below:</p>
-
-    <p><b>Email:</b> <a href="mailto:info@avishentreprises.co.in">info@avishentreprises.co.in</a></p>
-
-    <p>
-      <b>Registered Name:</b> Avish Enterprises<br />
-      <b>Registered Address:</b> Room No: 26-4-4B, Azad Nagar, RC Marg, Chembur, Mumbai – 400074<br />
-      <b>GST Number:</b> 27BEPPC645Q1ZQ
-    </p>
-
-    <p>
-      <b>Contact Numbers:</b><br />
-      📞 <a href="tel:9870456111">9870456111</a><br />
-      📞 <a href="tel:9324864813">9324864813</a>
-    </p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:info@avishenterprises.co.in">info@avishenterprises.co.in</a></p>
+      <p><strong>Registered Name:</strong> Avish Enterprises</p>
+      <p><strong>Registered Address:</strong> Room no: 26-4-4B, Azad Nagar, RC Marg, Chembur, Mumbai - 400074</p>
+      <p><strong>Contact Numbers:</strong> 9870456111 / 9324864813</p>
+      <p><strong>GST No:</strong> 27BEPPC645Q1ZQ</p>
+    </div>
 
     <form action="https://formspree.io/f/xjkeqdyd" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 Avish Enterprises. All rights reserved.</p>
+    &copy; 2025 Avish Enterprises | All Rights Reserved
   </footer>
+
 </body>
 </html>
 
